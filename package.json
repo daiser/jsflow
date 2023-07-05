@@ -1,0 +1,11 @@
+{
+  "name": "jsflow",
+  "version": "1.0.0",
+  "description": "Let data Flow!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roman Kvitkov",
+  "license": "ISC"
+}
