@@ -9,6 +9,10 @@
   "author": "Roman Kvitkov",
   "license": "ISC",
   "devDependencies": {
-    "ts-jest": "^29.1.1"
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
   }
 }

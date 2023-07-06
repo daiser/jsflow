@@ -114,21 +114,16 @@ class Classificator<V, C> implements Input<V> {
                 flows.push(this.flowMap.get(class_)!)
             }
         }
+        if (flows.length == 0 && this.unclassified != null) {
+            flows.push(this.unclassified)
+        }
 
         return flows
     }
 
     accept(value: V): void {
-        const flows = this.findFlows(this.classify(value))
-
-        if (flows.length > 0) {
-            for (let outFlow of flows) {
-                outFlow.accept(value)
-            }
-        } else {
-            if (this.unclassified != null) {
-                this.unclassified.accept(value)
-            }
+        for (let flow of this.findFlows(this.classify(value))) {
+            flow.accept(value)
         }
     }
 }
